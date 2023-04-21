@@ -4,30 +4,58 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.cdnfonts.com/css/vremena-grotesk" rel="stylesheet">
   <link rel="stylesheet" href="src/style.css">
   <title>Document</title>
 </head>
 <body>
   <div class="container mx-auto">
-    <button class="bg-white border-2 p-2">Add new book</button>
-    <div class="addBookModal border-2 w-1/2 mx-auto">
-      <div class="hystmodal__window flex flex-col gap-2">
-        <button data-hystclose class="hystmodal__close">Close</button>  
-        <form id="newBook" class="flex flex-col gap-2">
-          <input placeholder="Название Книги" class="border-2 w-1/2 mx-auto" type="text" name="bookName">
-          <input placeholder="Имя и Фамилия автора" class="border-2 w-1/2 mx-auto" type="text" name="authorName">
-          <input type="range w-1/2 mx-auto" min="1" max="10">
-          <select form="newBook" class="w-1/2 mx-auto">
-            <option selected>Не выбрано</option>
-            <option>Роман</option>
-            <option>Науч-поп</option>
-            <option>Биография</option>
-            <option>Поэма</option>
-          </select>
-          <button class="h-5 border-2 w-20 mx-auto" type="submit"></button>
-        </form>
-    </div>
-    </div>
+    <header class="p-12 flex justify-between">
+      <h3 class="text-2xl w-1/4">UBook</h3>
+      <input type="text" class="w-3/4 text-2xl px-5" placeholder="Введите название или автора...">
+    </header>
+    <main class="flex">
+      <aside class="flex flex-col w-4/12">
+        <button>Добавить книгу</button>
+        <button>Жанры</button>
+        <button>Авторы</button>
+        <button>Оценки</button>
+      </aside>
+      <section class="w-8/12 flex flex-col gap-7">
+        <div class="addBook-menu flex justify-between flex-col gap-12">
+          <h1 class="text-6xl">Добавление книги</h1>
+          <form>
+            <div>
+              <input type="text" placeholder="3434">
+              <select>
+                <option>Роман</option>
+              </select>
+              <button>Добавить жанр</button>
+            </div>
+            <div><input type="text" placeholder="3434"></div>
+            <div></div>
+
+          </form>
+        </div>
+        <div class="content-menu flex justify-between hidden">
+          <h1 class="text-6xl">Мои книги</h1>
+          <div class="content-menu_btns flex gap-7">
+            <button>По рейтингу</button>
+            <button>По дате</button>
+            <button>Избранное</button>
+          </div>
+        </div>
+        <ul>
+          <li>
+            <img alt="">
+            <h3>Название книги</h3>
+            <h4>Автор</h4>
+            <h5>Рейтинг</h5>
+            <p>Дата добавления</p>
+          </li>
+        </ul>
+      </section>
+    </main>
   </div>
   <script type="module" src="main.js"></script>
 </body>
