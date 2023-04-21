@@ -24,21 +24,21 @@
       <section class="w-8/12 flex flex-col gap-7">
         <div class="addBook-menu flex justify-between flex-col gap-12">
           <h1 class="text-6xl">Добавление книги</h1>
-          <form class="flex flex-col gap-20">
+          <form class="flex flex-col gap-20" id="addBookBtn">
             <div class="flex justify-between">
-              <div><input type="text" placeholder="Название книги" required></div>
+              <div><input type="text" placeholder="Название книги" name="book" required></div>
               <div>
-                <select>
+                <select name="genre">
                 <option>Роман</option>
               </select>
               <button>Добавить жанр</button>
               </div>
             </div>
             <div class="flex justify-between">
-              <input type="text" placeholder="Автор" required>
-              <input type="range" min="1" max="5">
+              <input type="text" placeholder="Автор" required name="author">
+              <input type="range" min="1" max="5" name="score">
             </div>
-            <button type="submit" class="ml-auto" id="addBookBTN">Добавить книгу</button>
+            <button type="submit" class="ml-auto">Добавить книгу</button>
           </form>
         </div>
         <div class="content-menu flex justify-between hidden">
@@ -49,7 +49,7 @@
             <button>Избранное</button>
           </div>
         </div>
-        <ul>
+        <ul class="library-list">
           <li>
             <h3>Название книги</h3>
             <h4>Автор</h4>
