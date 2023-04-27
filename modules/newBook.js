@@ -10,7 +10,15 @@ export function addBook(formAdd) {
         const bookName = formData.get('book')
         const scoreBook = formData.get('score')
         const genre = formData.get('genre')
-        console.log(authorName, bookName, scoreBook, genre)
+        const addTime = Date.now()
         formAddBook.reset()
+
+        let newItem = document.createElement('li')
+        newItem.innerHTML = `
+        <h3>${bookName}</h3>
+        <h4>${authorName}</h4>
+        <h5>${scoreBook}</h5>
+        <p>${addTime}</p>`
+        library.appendChild(newItem)
     })
 }

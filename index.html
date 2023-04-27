@@ -16,7 +16,7 @@
     </header>
     <main class="flex">
       <aside class="flex flex-col w-4/12">
-        <button>Добавить книгу</button>
+        <button class="addMenu">Добавить книгу</button>
         <button>Жанры</button>
         <button>Авторы</button>
         <button>Оценки</button>
@@ -41,7 +41,7 @@
             <button type="submit" class="ml-auto">Добавить книгу</button>
           </form>
         </div>
-        <div class="content-menu flex justify-between hidden">
+        <div class="content-menu flex justify-between hidden duration-300">
           <h1 class="text-6xl">Мои книги</h1>
           <div class="content-menu_btns flex gap-7">
             <button>По рейтингу</button>
@@ -49,7 +49,7 @@
             <button>Избранное</button>
           </div>
         </div>
-        <ul class="library-list">
+        <ul class="library-list flex gap-5">
           <li>
             <h3>Название книги</h3>
             <h4>Автор</h4>
