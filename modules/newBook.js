@@ -10,7 +10,7 @@ export function addBook(formAdd) {
         const bookName = formData.get('book')
         const scoreBook = formData.get('score')
         const genre = formData.get('genre')
-        const addTime = Date.now()
+        const addTime = new Date()
         formAddBook.reset()
 
         let newItem = document.createElement('li')
@@ -18,7 +18,7 @@ export function addBook(formAdd) {
         <h3>${bookName}</h3>
         <h4>${authorName}</h4>
         <h5>${scoreBook}</h5>
-        <p>${addTime}</p>`
+        <p>${addTime.getDate()} ${addTime.getMonth()}</p>`
         library.appendChild(newItem)
     })
 }

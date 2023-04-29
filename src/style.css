@@ -5,3 +5,7 @@
 .container {
     width: 1400px;
 }
+
+.hide {
+    display: none;
+}
