@@ -1,5 +1,7 @@
 import {addBook} from "./modules/newBook";
-import {hideMenu} from "./modules/aside";
-
+import {showMenuContent} from "./modules/aside";
 addBook('#addBookBtn')
-hideMenu('.addMenu', '.addBook-menu', '.content-menu')
+
+
+
+showMenuContent('.menu-sections', '.aside-buttons')
