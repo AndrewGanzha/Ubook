@@ -15,15 +15,24 @@
       <input type="text" class="w-3/4 text-2xl px-5" placeholder="Введите название или автора...">
     </header>
     <main class="flex">
-      <aside class="flex flex-col w-4/12">
+      <aside class="flex flex-col w-4/12 aside-buttons gap-3">
+        <button class="mainMenu">Мои книги</button>
         <button class="addMenu">Добавить книгу</button>
-        <button>Жанры</button>
-        <button>Авторы</button>
-        <button>Оценки</button>
+        <button class="genreList">Жанры</button>
+        <button class="authorList">Авторы</button>
+        <button class="ratingList">Оценки</button>
       </aside>
       <section class="w-8/12 flex flex-col gap-7">
-        <div class="addBook-menu flex justify-between flex-col gap-12">
-          <h1 class="text-6xl">Добавление книги</h1>
+        <div class="menu-content flex justify-between menu-sections">
+          <h2 class="text-6xl">Мои книги</h2>
+          <div class="content-menu_btns gap-7 flex text-2xl">
+            <button>По рейтингу</button>
+            <button>По дате</button>
+            <button>Избранное</button>
+          </div>
+        </div>
+        <div class="menu-addBook flex justify-between flex-col gap-12 menu-sections hide">
+          <h2 class="text-6xl">Добавление книги</h2>
           <form class="flex flex-col gap-20" id="addBookBtn">
             <div class="flex justify-between">
               <div><input type="text" placeholder="Название книги" name="book" required></div>
@@ -41,25 +50,41 @@
             <button type="submit" class="ml-auto">Добавить книгу</button>
           </form>
         </div>
-        <div class="content-menu flex justify-between hidden duration-300">
-          <h1 class="text-6xl">Мои книги</h1>
-          <div class="content-menu_btns flex gap-7">
-            <button>По рейтингу</button>
-            <button>По дате</button>
-            <button>Избранное</button>
-          </div>
+        <div class="menu-genre flex justify-between menu-sections hide">
+          <h2 class="text-6xl">Жанры</h2>
+          <div class="gap-7 flex text-2xl">
+          <button>По рейтингу</button>
+          <button>По дате</button>
+          <button>Избранное</button>
+        </div>
+        </div>
+        <div class="menu-author flex justify-between menu-sections hide">
+          <h2 class="text-6xl">Авторы</h2>
+          <div class="gap-7 flex text-2xl">
+          <button>По рейтингу</button>
+          <button>По дате</button>
+          <button>Избранное</button>
+        </div>
+        </div>
+        <div class="menu-rating flex justify-between menu-sections hide">
+          <h2 class="text-6xl">Оценки</h2>
+          <div class="gap-7 flex text-2xl">
+          <button>По рейтингу</button>
+          <button>По дате</button>
+          <button>Избранное</button>
+        </div>
         </div>
         <ul class="library-list flex gap-5">
           <li>
             <h3>Название книги</h3>
-            <h4>Автор</h4>
-            <h5>Рейтинг</h5>
+            <h3>Автор</h3>
+            <h3>Рейтинг</h3>
             <p>Дата добавления</p>
           </li>
         </ul>
       </section>
     </main>
   </div>
-  <script type="module" src="main.js"></script>
+  <script defer type="module" src="main.js"></script>
 </body>
 </html>
