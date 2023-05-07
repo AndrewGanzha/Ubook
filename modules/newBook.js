@@ -6,7 +6,7 @@ export function addBook(formAdd) {
     let library = document.querySelector('.library-list')
     let formAddBook = document.querySelector(formAdd)
 
-    formAddBook.addEventListener('submit', (e) => {
+    formAddBook.addEventListener('submit', async (e) => {
         e.preventDefault()
         const formData = new FormData(formAddBook)
         const authorName = formData.get('author')
@@ -26,7 +26,7 @@ export function addBook(formAdd) {
         
             return await res.json();
         };
-        postData('http://localhost:3000/books', dataBook)
+        await postData('http://localhost:3000/books', dataBook)
         loadlibrary()
         formAddBook.reset()
     })
