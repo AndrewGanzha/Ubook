@@ -36,18 +36,21 @@
           <form class="flex flex-col gap-20" id="addBookBtn">
             <div class="flex justify-between">
               <div><input type="text" placeholder="Название книги" name="book" required></div>
-              <div>
+              <!-- <div>
                 <select name="genre">
                 <option>Роман</option>
               </select>
               <button>Добавить жанр</button>
-              </div>
+              </div> -->
             </div>
             <div class="flex justify-between">
               <input type="text" placeholder="Автор" required name="author">
               <input type="range" min="1" max="5" name="score">
             </div>
-            <button type="submit" class="ml-auto">Добавить книгу</button>
+            <div class="flex justify-between">
+              <input class="w-2/4" type="text" required name="cover" placeholder="Вставьте ссылку на изображение">
+              <button type="submit" class="ml-auto">Добавить книгу</button>
+            </div>
           </form>
         </div>
         <!-- <div class="menu-genre flex justify-between menu-sections hide">
@@ -74,13 +77,7 @@
           <button>Избранное</button>
         </div>
         </div> -->
-        <ul class="library-list flex gap-5">
-          <li>
-            <h3>Название книги</h3>
-            <h3>Автор</h3>
-            <h3>Рейтинг</h3>
-            <p>Жанр</p>
-          </li>
+        <ul class="w-10/12 library-list flex gap-5 flex-wrap">
         </ul>
       </section>
     </main>

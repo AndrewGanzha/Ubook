@@ -12,10 +12,8 @@ export function addBook(formAdd) {
         const authorName = formData.get('author')
         const bookName = formData.get('book')
         const scoreBook = formData.get('score')
-        const genre = formData.get('genre')
-        const addTime = new Date()
+        const bookImg = formData.get('cover')
         const dataBook = Object.fromEntries(formData)
-        console.log(dataBook)
 
         const postData = async (url, data) => {
             let res = await fetch(url, {
@@ -28,18 +26,8 @@ export function addBook(formAdd) {
         
             return await res.json();
         };
-
         postData('http://localhost:3000/books', dataBook)
-
-        formAddBook.reset()
-
-        let newBook = {
-            "bookName": bookName,
-            "authorName": authorName,
-            "grate": scoreBook,
-            "addData": addTime
-        }
-
         loadlibrary()
+        formAddBook.reset()
     })
 }
