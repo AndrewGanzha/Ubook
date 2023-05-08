@@ -1,15 +1,15 @@
 {
   "books": [
     {
-      "book": "23",
-      "author": "23",
+      "book": "Мастер и Маргарита",
+      "author": "Булгаков",
       "score": "3",
       "cover": "https://bipbap.ru/wp-content/uploads/2021/11/1619541010_52-oir_mobi-p-nyashnie-kotiki-zhivotnie-krasivo-foto-57.jpg",
       "id": 1
     },
     {
-      "book": "232",
-      "author": "232",
+      "book": "Преступление и наказание",
+      "author": "Достоевский",
       "score": "3",
       "cover": "https://bipbap.ru/wp-content/uploads/2021/11/1619541010_52-oir_mobi-p-nyashnie-kotiki-zhivotnie-krasivo-foto-57.jpg",
       "id": 2

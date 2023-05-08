@@ -5,7 +5,6 @@ export async function loadlibrary () {
 
     if(response.ok) {
         booksItemList = await response.json()
-        console.log(booksItemList)
     } else {
         alert('Ошибка загрузки библиотеки')
     }
@@ -25,7 +24,7 @@ export async function loadlibrary () {
         let newBook = new book(item.book, item.author, item.score, item.cover)
         let liItem = document.createElement('li')
         liItem.innerHTML = `
-        <img class="w-80 h-72 bg-gray-200" src="${newBook.cover}">
+        <img class="w-46 h-72 bg-gray-200" src="${newBook.cover}">
         <h3>${newBook.book}</h3>
         <h3>${newBook.author}</h3>
         <h3>${newBook.score}</h3>`
