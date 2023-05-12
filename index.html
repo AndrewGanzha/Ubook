@@ -9,20 +9,20 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="container mx-auto">
-    <header class="p-12 flex justify-between">
+  <div class="mx-auto max-w-screen-xl">
+    <header class="flex-col gap-4 flex justify-between p-4 md:p-12 md:flex-row md:gap-0">
       <h3 class="text-2xl w-1/4">UBook</h3>
-      <input type="text" class="w-3/4 text-2xl px-5 elastic-search" placeholder="Введите название или автора...">
+      <input type="text" class="text-base p-0 w-60 md:px-5 md:w-3/4 md:text-2xl elastic-search" placeholder="Введите название или автора...">
     </header>
     <main class="flex">
-      <aside class="flex flex-col w-4/12 aside-buttons gap-3 text-2xl">
+      <aside class="flex flex-col w-2/6 aside-buttons gap-3 text-2xl">
         <button class="mainMenu">Мои книги</button>
         <button class="addMenu">Добавить книгу</button>
         <!-- <button class="genreList">Жанры</button>
         <button class="authorList">Авторы</button>
         <button class="ratingList">Оценки</button> -->
       </aside>
-      <section class="w-8/12 flex flex-col gap-7">
+      <section class="w-5/6 flex flex-col gap-7">
         <div class="menu-content flex justify-between menu-sections">
           <h2 class="text-6xl">Мои книги</h2>
           <!-- <div class="content-menu_btns gap-7 flex text-2xl">
