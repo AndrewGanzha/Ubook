@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.cdnfonts.com/css/vremena-grotesk" rel="stylesheet">
   <link rel="stylesheet" href="src/style.css">
-  <title>Document</title>
+  <title>UBook</title>
 </head>
 <body>
   <div class="mx-auto max-w-screen-xl">
@@ -14,17 +14,17 @@
       <h3 class="text-2xl w-1/4">UBook</h3>
       <input type="text" class="text-base p-0 w-60 md:px-5 md:w-3/4 md:text-2xl elastic-search" placeholder="Введите название или автора...">
     </header>
-    <main class="flex">
-      <aside class="flex flex-col w-2/6 aside-buttons gap-3 text-2xl">
+    <main class="flex-col md:flex-row flex">
+      <aside class="text-xl flex flex-col md:w-2/6 aside-buttons gap-3 sm:text-2xl">
         <button class="mainMenu">Мои книги</button>
         <button class="addMenu">Добавить книгу</button>
         <!-- <button class="genreList">Жанры</button>
         <button class="authorList">Авторы</button>
         <button class="ratingList">Оценки</button> -->
       </aside>
-      <section class="w-5/6 flex flex-col gap-7">
+      <section class="md:w-5/6 flex flex-col gap-7">
         <div class="menu-content flex justify-between menu-sections">
-          <h2 class="text-6xl">Мои книги</h2>
+          <h2 class="text-4xl md:text-6xl mx-auto md:mx-0">Мои книги</h2>
           <!-- <div class="content-menu_btns gap-7 flex text-2xl">
             <button>По рейтингу</button>
             <button>По дате</button>
@@ -32,9 +32,9 @@
           </div> -->
         </div>
         <div class="menu-addBook flex justify-between flex-col gap-12 menu-sections hide">
-          <h2 class="text-6xl">Добавление книги</h2>
-          <form class="flex flex-col gap-20" id="addBookBtn">
-            <div class="flex justify-between">
+          <h2 class="text-4xl mx-auto md:mx-0 md:text-6xl">Добавление книги</h2>
+          <form class="mx-5 flex flex-col gap-20 md::mx-0" id="addBookBtn">
+            <div class="flex justify-between md:mx-0">
               <div><input type="text" placeholder="Название книги" name="book" required></div>
               <!-- <div>
                 <select name="genre">
@@ -43,13 +43,13 @@
               <button>Добавить жанр</button>
               </div> -->
             </div>
-            <div class="flex justify-between">
+            <div class="flex flex-col gap-10 justify-between md:flex-row md:mx-0 md:gap-0">
               <input type="text" placeholder="Автор" required name="author">
               <input type="range" min="1" max="5" name="score">
             </div>
-            <div class="flex justify-between">
-              <input class="w-2/4" type="text" required name="cover" placeholder="Вставьте ссылку на изображение">
-              <button type="submit" class="ml-auto b">Добавить книгу</button>
+            <div class="flex-col items-center flex md:justify-between md:mx-0 md:flex-row md:items-start">
+              <input class="w-full text-center md:text-left md:w-2/4" type="text" required name="cover" placeholder="Вставьте ссылку на изображение">
+              <button type="submit" class="md:ml-auto">Добавить книгу</button>
             </div>
           </form>
         </div>
@@ -77,7 +77,7 @@
           <button>Избранное</button>
         </div>
         </div> -->
-        <ul class="library-list flex gap-5 flex-wrap elastic-list">
+        <ul class="mx-16 sm:mx-20 library-list flex flex-wrap elastic-list md:mx-0 sm:gap-5">
         </ul>
       </section>
     </main>
