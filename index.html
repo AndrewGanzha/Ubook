@@ -35,7 +35,7 @@
           <h2 class="text-4xl mx-auto md:mx-0 md:text-6xl">Добавление книги</h2>
           <form class="mx-5 flex flex-col gap-20 md::mx-0" id="addBookBtn">
             <div class="flex justify-between md:mx-0">
-              <div><input type="text" placeholder="Название книги" name="book" required></div>
+              <div><input autocomplete="off" type="text" placeholder="Название книги" name="book" required></div>
               <!-- <div>
                 <select name="genre">
                 <option>Роман</option>
@@ -44,7 +44,7 @@
               </div> -->
             </div>
             <div class="flex flex-col gap-10 justify-between md:flex-row md:mx-0 md:gap-0">
-              <input type="text" placeholder="Автор" required name="author">
+              <input autocomplete="off" type="text" placeholder="Автор" required name="author">
               <input type="range" min="1" max="5" name="score">
             </div>
             <div class="flex-col items-center flex md:justify-between md:mx-0 md:flex-row md:items-start">
